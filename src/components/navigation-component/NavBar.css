@@ -1,0 +1,20 @@
+.navbar {
+  background-color: #ECB390;
+  margin-bottom: 50px;
+}
+
+.nav-link {
+  color: #DF7861;
+  font-weight: bold;
+  padding: 20px;
+
+}
+/* 
+.nav-class{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+} */
