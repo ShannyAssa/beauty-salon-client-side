@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/home-component/Home';
-import NavBar from './components/navigation-component/NavBar';
-import About from './components/about-component/About';
-import Login from './components/login-component/Login';
-import Signup from './components/sign-up-component/Signup';
-import PasswordReset from './components/password-reset-component/PasswordReset';
+import Home from './components/HomePage/Home';
+import NavBar from './components/NavBar/NavBar';
+import About from './components/AboutPage/About';
+import Login from './components/LoginPage/Login';
+import Signup from './components/SignUpPage/Signup';
+import PasswordReset from './components/PasswordResetPages/PasswordReset';
 
 const App = () => {
     // const [backendData, setBackendData] = useState([{}]);
