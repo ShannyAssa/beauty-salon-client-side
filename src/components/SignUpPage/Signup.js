@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 import './Signup.css'
 
 const Signup = () => {
@@ -23,63 +25,88 @@ const Signup = () => {
     });
   };
 
+  const history = useHistory();
+
   const handleSignup = (e) => {
     e.preventDefault();
-    // Add your logic to handle form submission (e.g., sending data to the server)
-    console.log('Form submitted:', formData);
+    try {
+      axios.post("http://localhost:8000/signup", formData)
+        .then(response => {
+            console.log(response);
+            if(response.status === 200) {
+              history.push('/');
+            }
+            else {
+              console.log('something aint right');
+            }
+        })
+    }
+    catch(error) {
+      return alert(error.response.data.error);
+    }
   };
 
-  return ( 
+  return (
     <form onSubmit={handleSignup}>
-       <label className="label-group">
-        First Name:
-        <input type="text" name="firstname" value={formData.firstname} onChange={handleChange} required />
-      </label>
+        <label className="label-group">
+          First Name:
+          <input type="text" name="firstname" value={formData.firstname} onChange={handleChange} required />
+        </label>
 
-      <label className="label-group">
-        Last Name:
-        <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} required />
-      </label>
+        <label className="label-group">
+          Last Name:
+          <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} required />
+        </label>
 
-      <label className="label-group">
-        Id:
-        <input type="number" name="id" value={formData.id} onChange={handleChange} pattern="[0-9]{9}"
-    title="Please enter a 9-digit ID" required />
-      </label>
+        <label className="label-group">
+          Id:
+          <input type="number" name="id" value={formData.id} onChange={handleChange} pattern="[0-9]{9}"
+            title="Please enter a 9-digit ID" required />
+        </label>
 
-      <label className="label-group">
-        Gender:
-        <input type="text" name="gender" value={formData.gender} onChange={handleChange} required />
-      </label>
+        <label className="label-group">
+          Gender:
+          <select
+            name="gender"
+            value={formData.gender}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="nonBinary">Non-Binary</option>
+            <option value="preferNotToDisclose">Prefer not to disclose</option>
+          </select>
+        </label>
 
-      <label className="label-group">
-        Birthday:
-        <input type="date" name="birthday" value={formData.birthday} onChange={handleChange} required />
-      </label>
+        <label className="label-group">
+          Birthday:
+          <input type="date" name="birthday" value={formData.birthday} onChange={handleChange} required />
+        </label>
 
-      <label className="label-group">
-        Email:
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-      </label>
+        <label className="label-group">
+          Email:
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+        </label>
 
-      <label className="label-group">
-        Phone Number:
-        <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} required />
-      </label>
+        <label className="label-group">
+          Phone Number:
+          <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} required />
+        </label>
 
-      <label className="label-group">
-        Username:
-        <input type="text" name="username" value={formData.username} onChange={handleChange} required />
-      </label>
+        <label className="label-group">
+          Username:
+          <input type="text" name="username" value={formData.username} onChange={handleChange} required />
+        </label>
 
-      <label className="label-group">
-        Password:
-        <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-      </label>
+        <label className="label-group">
+          Password:
+          <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+        </label>
 
-      <button type="signup">Signup</button>
-    </form>
-
+        <button type="signup">Signup</button>
+      </form>
    );
 }
  

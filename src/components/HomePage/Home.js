@@ -3,9 +3,9 @@ import './Home.css';
 
 const Home = () => {
   return (
-    <t>
+    <p>
       Hey Home text
-    </t>
+    </p>
     );
 }
  
