@@ -1,45 +1,51 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #FFE1E1;
-  margin: 20px;
+  font-family: 'Quicksand', sans-serif; /* Match the body font-family */
+  background-color: #fafafa; /* Match the body background color */
+  margin: 20px 20px; /* Match the body margin */
   display: grid;
   place-items: center;
   height: 100vh;
 }
 
 form {
-  background-color: #FFCFCF;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: grid;
+  background-color: #FFCFCF; /* Match the form background color */
+  padding: 30px; /* Match the form padding */
+  border-radius: 15x;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  width: 360px;
 }
 
 .label-group {
   display: block;
-  margin-bottom: 15px;
-  color: #9B506B;
+  margin-bottom: 10px; /* Adjusted for better spacing */
+  color: #444; /* Match the body text color */
 }
 
-input, select {
+input,
+select {
   width: 100%;
-  padding: 8px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
   margin-top: 5px;
   box-sizing: border-box;
-  border: 1px solid #9B506B;
-  border-radius: 4px;
 }
 
 button {
-  background-color: #FFB3A9;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
+  background-color: #FFB3A9; /* Match the button background color */
+  color: #444; /* Match the body text color */
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 36px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
   cursor: pointer;
-  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #9B506B;
+  background-color: #9B506B; /* Match the nav-link hover color */
+  color: #fff;
 }

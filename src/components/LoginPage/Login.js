@@ -26,7 +26,7 @@ const Login = () => {
 
   return (
     <form onLogin={handleLogin}>
-      
+      <h1>Login</h1>
       <div className="radio-group">
         <label>
           <input 

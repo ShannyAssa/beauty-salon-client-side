@@ -48,6 +48,7 @@ const Signup = () => {
 
   return (
     <form onSubmit={handleSignup}>
+        <h1>Signup</h1>
         <label className="label-group">
           First Name:
           <input type="text" name="firstname" value={formData.firstname} onChange={handleChange} required />
