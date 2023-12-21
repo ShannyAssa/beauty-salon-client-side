@@ -35,3 +35,22 @@
 .nav-link:hover {
   color: #ff0099; /* Match the error text color */
 }
+
+.nav-icon {
+  width: 40px; 
+  height: 40px; 
+  margin-right: 10px;
+  transition: transform 1.5s ease; 
+}
+
+.nav-icon:hover {
+  width: 40px; 
+  height: 40px; 
+  margin-right: 10px;
+  transform: scale(1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
