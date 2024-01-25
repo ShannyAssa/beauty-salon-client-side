@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Element } from 'react-scroll';
+import treatmentPhotos from './photosLoader';
+
 
 
 const Treatments = ({domain}) => {
@@ -93,7 +95,8 @@ const Treatments = ({domain}) => {
               <Slider {...slickSettings}>
                 {treatment.images.map((image, index) => (
                   <div key={index}>
-                    <img src={`${serverBaseURL}${image}`} alt={`Treatment ${treatmentIndex + 1} Image ${index + 1}`} />
+                    {console.log('treatment image', image)}
+                    <img src={treatmentPhotos[image]} /*alt={`Treatment ${treatmentIndex + 1} Image ${index + 1}`}*/ />
                   </div>
                 ))}
               </Slider>
@@ -129,7 +132,7 @@ const Treatments = ({domain}) => {
                       <Slider {...slickSettings}>
                         {treatment.images.map((image, index) => (
                           <div key={index}>
-                            <img src={`${serverBaseURL}${image}`} alt={`Treatment ${treatmentIndex + 1} Image ${index + 1}`} />
+                            <img src={treatmentPhotos[image]} />
                           </div>
                         ))}
                       </Slider>
