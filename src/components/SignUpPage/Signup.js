@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import axios from 'axios';
 import './Signup.css'
 
-const Signup = () => {
+const Signup = ({isLoggedIn, domain}) => {
 
   const [formData, setFormData] = useState({
     firstname: '',
@@ -29,21 +29,23 @@ const Signup = () => {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    try {
-      axios.post("http://localhost:8000/signup", formData)
+    axios.post(`${domain}/signup`, formData)
         .then(response => {
-            console.log(response);
+            // console.log(response);
             if(response.status === 200) {
+              localStorage.setItem('token', response.data.token);
+              isLoggedIn(true);
+              alert(response.data.message);
               history.push('/');
             }
             else {
               console.log('something aint right');
             }
         })
-    }
-    catch(error) {
-      return alert(error.response.data.error);
-    }
+        .catch(error => {
+          return alert(error.response.data.error);
+          isLoggedIn(false);
+        });
   };
 
   return (
@@ -107,6 +109,9 @@ const Signup = () => {
         </label>
 
         <button type="signup">Signup</button>
+
+        <p> <Link to="/login"  className="link-text">Already a member? Login now!</Link></p>
+
       </form>
    );
 }

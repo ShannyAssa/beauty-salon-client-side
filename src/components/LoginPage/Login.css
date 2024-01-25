@@ -34,6 +34,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   transition: background-color 0.3s ease;
@@ -71,4 +72,19 @@ a:hover {
 
 .radio-group span {
   margin-left: 5px;
+}
+
+.link-text {
+  font-weight: bold;
+  color: #9B506B;
+  text-decoration: none;
+  position: relative;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
 }

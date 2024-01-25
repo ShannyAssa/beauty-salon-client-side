@@ -1,1 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+.homepage-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.homepage-slider {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Style for each slide in the slider */
+.slick-slider {
+  width: 100%; /* Ensure the slider takes up the full width of its container */
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.slider-img {
+  width: 100%;
+  height: auto;
+}
+
+.homepage-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center; /* Center the content horizontally */
+}
+
+.welcome-message {
+  margin-bottom: 30px; /* Add margin for spacing */
+}
+
+.services {
+  display: flex;
+  justify-content: space-around; /* Distribute services evenly */
+}
+
+.salon-services,
+.spa-services,
+.massage-services {
+  text-align: center; /* Center text within each service */
+  width: 30%; /* Adjust the width based on your preference */
+}
+
+.services-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.contact-us {
+  margin-top: 30px; /* Add margin for spacing */
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+/* Change cursor on hover for better user experience */
+.contact-icon:hover {
+  cursor: pointer;
+}
+
+.services h3,
+.welcome-message h1 {
+  color: #ff0099;
+}
+
+.contact-us h2 {
+  color: #9B506B;
+  font-weight:bolder;
+}
+
+.contact-us p {
+  font-size:large;
+  margin: 5px;
+}

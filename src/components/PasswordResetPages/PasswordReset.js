@@ -17,10 +17,8 @@ const PasswordReset = () => {
     });
   };
 
-
   const handleResetPassword = (e) => {
     e.preventDefault();
-    console.log('gjdjdj');
   };
 
   return ( 

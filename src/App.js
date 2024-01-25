@@ -6,26 +6,31 @@ import About from './components/AboutPage/About';
 import Login from './components/LoginPage/Login';
 import Signup from './components/SignUpPage/Signup';
 import PasswordReset from './components/PasswordResetPages/PasswordReset';
+import Profile from './components/CustomerPages/Profile';
+import Treatments from './components/Treatments/Treatments';
+import AdminLogin from './components/AdminPages/AdminLogin';
+import Admin from './components/AdminPages/Admin';
 
 const App = () => {
-    // const [backendData, setBackendData] = useState([{}]);
 
-    // useEffect(()=> {
-    //   fetch("/api").then(
-    //     response => response.json())
-    //     .then(
-    //       data => {
-    //         setBackendData(data);
-    //         console.log(data);
-    //       }
-    //     )
-    // }, []);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
+  const domain = 'https://heavenly-horizon-beauty-salon-and-spa.onrender.com';
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+    setIsAdminLoggedIn(false);
+    // console.log('logged out');
+  };
 
   return ( 
     <div className="App">
       <Router>
-        <NavBar/>
+        < NavBar 
+          isLoggedIn={isLoggedIn} //removed setIsLoggedin ....
+          isAdminLoggedIn={isAdminLoggedIn}  
+          handleLogout={handleLogout} />
         <div className="content">
           <Switch>
             <Route exact path="/" >
@@ -35,13 +40,25 @@ const App = () => {
               <About/>
             </Route>
             <Route exact path="/login">
-              <Login/>
+              <Login isLoggedIn={setIsLoggedIn} domain={domain} />
             </Route>
             <Route exact path="/signup">
-              <Signup/>
+              <Signup isLoggedIn={setIsLoggedIn} domain={domain} />
             </Route>
             <Route exact path="/passwordReset">
-              <PasswordReset/>
+              <PasswordReset domain={domain}/>
+            </Route>
+            <Route exact path="/myProfile">
+              <Profile domain={domain}/>
+            </Route>
+            <Route exact path="/treatments">
+              <Treatments domain={domain}/>
+            </Route>
+            <Route exact path="/admin">
+              <Admin domain={domain}/>
+            </Route>
+            <Route exact path="/admin/login">
+              <AdminLogin isAdminLoggedIn={setIsAdminLoggedIn} domain={domain}/>
             </Route>
           </Switch>
         </div>

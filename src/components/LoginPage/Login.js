@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import axios from 'axios';
+
 import './Login.css';
 
-const Login = () => {
+const Login = ({isLoggedIn, domain}) => {
 
   const [loginData, setLoginData] = useState({
     loginType: 'email',
     loginValue: '',
     password: ''
   });
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,14 +21,35 @@ const Login = () => {
     });
   };
 
+  const history = useHistory();
+
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add your logic for handling login submission
-    console.log('Login submitted:', loginData);
+    
+    if(loginData.loginType && loginData.loginValue && loginData.password) {
+      axios.post(`${domain}/login`, loginData)
+        .then(response => {
+          // console.log(response);
+          if(response && response.status === 200) {
+            localStorage.setItem('token', response.data.token);
+            isLoggedIn(true);
+            history.push('/');
+          } else {
+              // alert(response.data.error);
+              alert(response?.data?.error || 'An error occurred');
+              isLoggedIn(false);
+            }
+        })
+        .catch(err=> {
+          // alert(err.response.data.error);
+          alert(err.response?.data?.error || 'An error occurred');
+          isLoggedIn(false);
+        });
+    }
   };
 
   return (
-    <form onLogin={handleLogin}>
+    <form onSubmit={handleLogin}>
       <h1>Login</h1>
       <div className="radio-group">
         <label>
@@ -72,8 +96,9 @@ const Login = () => {
       <button type="login">Log In</button>
 
       <div>
-        <p> <Link to="/passwordReset">Forgot your password?</Link></p>
-        <p> <Link to="/signup">New member? Sign up now!</Link></p>
+        <p> <Link to="/passwordReset" className="link-text">Forgot your password?</Link></p>
+        <p> <Link to="/signup" className="link-text">New member? Sign up now!</Link></p>
+        {error && <p className='error-message'>{error}</p>}
       </div>
     </form>
   );
