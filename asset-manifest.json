@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/beauty-salon-client-side/static/css/main.759fed07.css",
+    "main.js": "/beauty-salon-client-side/static/js/main.0cd13f59.js",
+    "static/media/yanir.jpg": "/beauty-salon-client-side/static/media/yanir.3710daf88effd0b25a53.jpg",
+    "static/media/roni.jpg": "/beauty-salon-client-side/static/media/roni.0dec9e8e68a0f8a820e7.jpg",
+    "static/media/massage-place.jpeg": "/beauty-salon-client-side/static/media/massage-place.4fb666a0885c4ee8a8b9.jpeg",
+    "static/media/yarin.jpg": "/beauty-salon-client-side/static/media/yarin.69a8b01dd10f58999409.jpg",
+    "static/media/yaron.jpg": "/beauty-salon-client-side/static/media/yaron.f72a84b19af21918ec19.jpg",
+    "static/media/salon.jpg": "/beauty-salon-client-side/static/media/salon.2bd231783e2c183e765b.jpg",
+    "static/media/Massage1.webp": "/beauty-salon-client-side/static/media/Massage1.2cb6b7c906c2983353b1.webp",
+    "static/media/Hydrafacial.webp": "/beauty-salon-client-side/static/media/Hydrafacial.3025dd6fe75e03ecff75.webp",
+    "static/media/facial-massage-icon.png": "/beauty-salon-client-side/static/media/facial-massage-icon.f8eb2eb20e1b3e666a3e.png",
+    "static/media/body-spa-icon.png": "/beauty-salon-client-side/static/media/body-spa-icon.31dbfe3147701cec0250.png",
+    "static/media/salon-icon.png": "/beauty-salon-client-side/static/media/salon-icon.229401e9744b0fe359fc.png",
+    "static/media/facial.webp": "/beauty-salon-client-side/static/media/facial.1ff6620df0da4f70e00f.webp",
+    "static/media/contact-icon.png": "/beauty-salon-client-side/static/media/contact-icon.e56d39592fec85dd0dd0.png",
+    "static/media/Massage2.webp": "/beauty-salon-client-side/static/media/Massage2.bb73539071e83ba7ae08.webp",
+    "static/media/slick.svg": "/beauty-salon-client-side/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/beauty-salon-client-side/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/beauty-salon-client-side/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/beauty-salon-client-side/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/beauty-salon-client-side/index.html",
+    "main.759fed07.css.map": "/beauty-salon-client-side/static/css/main.759fed07.css.map",
+    "main.0cd13f59.js.map": "/beauty-salon-client-side/static/js/main.0cd13f59.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.759fed07.css",
+    "static/js/main.0cd13f59.js"
+  ]
+}
