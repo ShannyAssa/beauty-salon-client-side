@@ -28,7 +28,7 @@ const AdminLogin = ({isAdminLoggedIn, domain}) => {
           if(response && response.status === 200) {
             localStorage.setItem('token', response.data.token);
             isAdminLoggedIn(true);
-            history.push('/');
+            history.push('/beauty-salon-client-side/admin');
             alert('admin logged in successfully');
           } else {
               // alert(response.data.error);
