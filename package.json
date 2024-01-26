@@ -1,5 +1,13 @@
 {
   "homepage":"https://shannyassa.github.io/beauty-salon-client-side/",
+  "aboutPage":"https://shannyassa.github.io/beauty-salon-client-side/about",
+  "signup":"https://shannyassa.github.io/beauty-salon-client-side/signup",
+  "treatmentsPage":"https://shannyassa.github.io/beauty-salon-client-side/treatments",
+  "login":"https://shannyassa.github.io/beauty-salon-client-side/login",
+  "profile":"https://shannyassa.github.io/beauty-salon-client-side/MyProfile",
+  "admin":"https://shannyassa.github.io/beauty-salon-client-side/admin",
+  "adminLogin":"https://shannyassa.github.io/beauty-salon-client-side/admin/login",
+  "passwordReset":"https://shannyassa.github.io/beauty-salon-client-side/admin/passwordReset",
   "name": "client",
   "version": "0.1.0",
   "private": true,
