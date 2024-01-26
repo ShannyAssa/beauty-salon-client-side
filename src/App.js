@@ -33,31 +33,31 @@ const App = () => {
           handleLogout={handleLogout} />
         <div className="content">
           <Switch>
-            <Route exact path="/" >
+            <Route exact path="/beauty-salon-client-side" >
               <Home/>
             </Route>
-            <Route exact path="/about" >
+            <Route exact path="/beauty-salon-client-side/about" >
               <About/>
             </Route>
-            <Route exact path="/login">
+            <Route exact path="/beauty-salon-client-side/login">
               <Login isLoggedIn={setIsLoggedIn} domain={domain} />
             </Route>
-            <Route exact path="/signup">
+            <Route exact path="/beauty-salon-client-side/signup">
               <Signup isLoggedIn={setIsLoggedIn} domain={domain} />
             </Route>
-            <Route exact path="/passwordReset">
+            <Route exact path="/beauty-salon-client-side/passwordReset">
               <PasswordReset domain={domain}/>
             </Route>
-            <Route exact path="/myProfile">
+            <Route exact path="/beauty-salon-client-side/myProfile">
               <Profile domain={domain}/>
             </Route>
-            <Route exact path="/treatments">
+            <Route exact path="/beauty-salon-client-side/treatments">
               <Treatments domain={domain}/>
             </Route>
-            <Route exact path="/admin">
+            <Route exact path="/beauty-salon-client-side/admin">
               <Admin domain={domain}/>
             </Route>
-            <Route exact path="/admin/login">
+            <Route exact path="/beauty-salon-client-side/admin/login">
               <AdminLogin isAdminLoggedIn={setIsAdminLoggedIn} domain={domain}/>
             </Route>
           </Switch>

@@ -33,7 +33,7 @@ const Login = ({isLoggedIn, domain}) => {
           if(response && response.status === 200) {
             localStorage.setItem('token', response.data.token);
             isLoggedIn(true);
-            history.push('/');
+            history.push('/beauty-salon-client-side/');
           } else {
               // alert(response.data.error);
               alert(response?.data?.error || 'An error occurred');
@@ -96,8 +96,8 @@ const Login = ({isLoggedIn, domain}) => {
       <button type="login">Log In</button>
 
       <div>
-        <p> <Link to="/passwordReset" className="link-text">Forgot your password?</Link></p>
-        <p> <Link to="/signup" className="link-text">New member? Sign up now!</Link></p>
+        <p> <Link to="/beauty-salon-client-side/passwordReset" className="link-text">Forgot your password?</Link></p>
+        <p> <Link to="/beauty-salon-client-side/signup" className="link-text">New member? Sign up now!</Link></p>
         {error && <p className='error-message'>{error}</p>}
       </div>
     </form>

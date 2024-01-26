@@ -226,17 +226,17 @@ const Profile = ({domain}) => {
           <button onClick={() => 
             {
               returnToNormalCSS();
-              navigation.push('/login');
+              navigation.push('/beauty-salon-client-side/login');
               }}>Login</button>
           <button onClick={() => 
             {
               returnToNormalCSS();
-              navigation.push('/signup');
+              navigation.push('/beauty-salon-client-side/signup');
               }}>Sign Up</button>
           <button onClick={() => 
           {
             returnToNormalCSS();
-            navigation.push('/');
+            navigation.push('/beauty-salon-client-side/');
             }}>HomePage</button>
 
         </div>

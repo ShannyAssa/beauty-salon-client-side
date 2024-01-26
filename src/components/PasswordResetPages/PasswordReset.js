@@ -58,7 +58,7 @@ const PasswordReset = () => {
 
       <div className="button-group">
         <button onClick={handleResetPassword}>Reset Password</button>
-        <Link to="/login">
+        <Link to="/beauty-salon-client-side/login">
           <button className="cancel-button">Cancel</button>
         </Link>
       </div>

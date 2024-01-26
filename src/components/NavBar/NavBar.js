@@ -12,13 +12,13 @@ const NavBar = ({isLoggedIn, isAdminLoggedIn, handleLogout}) => {
 
     handleLogout();
     alert('logged out successfully');
-    history.push('/');
+    history.push('/beauty-salon-client-side/');
   };
 
   return (
     <nav className="nav-class">
       <div className="home">
-        <Link to="/" className="nav-icon-link">
+        <Link to="/beauty-salon-client-side/" className="nav-icon-link">
           <img className="nav-icon"
             src={logoDefault}
             onMouseOver={(e) => (e.currentTarget.src = logoHover)}
@@ -26,14 +26,14 @@ const NavBar = ({isLoggedIn, isAdminLoggedIn, handleLogout}) => {
             alt="Logo"
           />
         </Link>
-        <Link to="/">
+        <Link to="/beauty-salon-client-side/">
           <h2 className="nav-title">Heavenly Horizon Beauty Salon & Spa</h2>
         </Link>
       </div>
 
       <div className="nav-links">
-        <Link className="nav-link" to="/about">About</Link>
-        <Link className="nav-link" to="/treatments">Our Treatments</Link>
+        <Link className="nav-link" to="/beauty-salon-client-side/about">About</Link>
+        <Link className="nav-link" to="/beauty-salon-client-side/treatments">Our Treatments</Link>
         {/* { isLoggedIn ? ( 
         <>
           <div className="logged-in-links">
@@ -51,20 +51,20 @@ const NavBar = ({isLoggedIn, isAdminLoggedIn, handleLogout}) => {
         {isLoggedIn ? (
           // If the user is logged in
           <div className="logged-in-links">
-            <Link className="nav-link" to="/MyProfile">My Profile</Link>
+            <Link className="nav-link" to="/beauty-salon-client-side/MyProfile">My Profile</Link>
             <div className="logout-button" onClick={handleLogoutClick}>Logout</div>
           </div>
         ) : isAdminLoggedIn ? (
           // else, if an admin is logged in
           <div className="logged-in-links">
-            <Link className="nav-link" to="/admin">Admin</Link>
+            <Link className="nav-link" to="/beauty-salon-client-side/admin">Admin</Link>
             <div className="logout-button" onClick={handleLogoutClick}>Logout</div>
           </div>
         ) : (
           // if neither of them is logged in
           <>
-            <Link className="nav-link" to="/signup">Signup</Link>
-            <Link className="nav-link" to="/login">Login</Link>
+            <Link className="nav-link" to="/beauty-salon-client-side/signup">Signup</Link>
+            <Link className="nav-link" to="/beauty-salon-client-side/login">Login</Link>
           </>
         )}
 

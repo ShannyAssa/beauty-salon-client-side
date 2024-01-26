@@ -36,7 +36,7 @@ const Signup = ({isLoggedIn, domain}) => {
               localStorage.setItem('token', response.data.token);
               isLoggedIn(true);
               alert(response.data.message);
-              history.push('/');
+              history.push('/beauty-salon-client-side/');
             }
             else {
               console.log('something aint right');
@@ -110,7 +110,7 @@ const Signup = ({isLoggedIn, domain}) => {
 
         <button type="signup">Signup</button>
 
-        <p> <Link to="/login"  className="link-text">Already a member? Login now!</Link></p>
+        <p> <Link to="/beauty-salon-client-side/login"  className="link-text">Already a member? Login now!</Link></p>
 
       </form>
    );

@@ -337,12 +337,12 @@ const Admin = (domain) => {
           <button onClick={() => 
             {
               returnToNormalCSS();
-              navigation.push('/admin/login');
+              navigation.push('/beauty-salon-client-side/admin/login');
               }}>Log in as admin</button>
           <button onClick={() => 
           {
             returnToNormalCSS();
-            navigation.push('/');
+            navigation.push('/beauty-salon-client-side/');
             }}>HomePage</button>
 
         </div>
