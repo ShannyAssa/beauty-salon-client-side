@@ -67,6 +67,8 @@ const Home = () => {
       
       <footer>
         <p>&copy; 2024 Heavenly Horizon Beauty Salon & Spa. All rights reserved.</p>
+        <p> <Link to="/beauty-salon-client-side/admin"  className="link-text">View the admin side now!</Link></p>
+
       </footer>
 
     </div>
